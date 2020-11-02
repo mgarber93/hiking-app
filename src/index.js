@@ -7,6 +7,9 @@ const ejs = require('ejs');
 const db = require('./db');
 const app = express();
 const morgan = require('morgan');
+const path = require('path');
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 function isLoggedOn(req, res, next) {
   if (req.isAuthenticated()) {
