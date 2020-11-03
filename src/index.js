@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 const Strategy = require('passport-local').Strategy;
 const ejs = require('ejs');
-
 const db = require('./db');
 const app = express();
 const morgan = require('morgan');

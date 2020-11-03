@@ -1,7 +1,14 @@
+<%- include('partials/header') -%>
+<%- include('partials/navbar') -%>
+
+
 <p>
-ID: <%= user.id %><br/>
-Username: <%= user.username %><br/>
-Name: <%= user.displayName %><br/>
-Phyiscal Level: <%= user.physicalLevel %><br/>
+    ID: <%= user.id %><br />
+    Username: <%= user.username %><br />
+    Name: <%= user.displayName %><br />
+    Phyiscal Level: <%= user.physicalLevel %><br />
 </p>
+
 <a href="/logout">Log out</a>
+
+<%- include('partials/footer') -%>
