@@ -99,6 +99,10 @@ app.get('/profile', isLoggedOn, function (req, res) {
   res.render('profile', { user: req.user });
 });
 
+app.get('/gear', function (req, res) {
+  res.render('gear');
+});
+
 app.listen(port, () => {
   console.log(`Trail Finder is listening on port http://localhost:${port}`);
 });
