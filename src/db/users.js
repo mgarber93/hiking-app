@@ -1,4 +1,4 @@
-var records = [
+const records = [
   {
     id: 0,
     username: 'user',
@@ -15,7 +15,7 @@ var records = [
   },
 ];
 
-exports.findById = function (id, cb) {
+module.exports.findById = function (id, cb) {
   process.nextTick(function () {
     if (records.hasOwnProperty(id)) {
       cb(null, records[id]);
@@ -25,7 +25,7 @@ exports.findById = function (id, cb) {
   });
 };
 
-exports.findByUsername = function (username, cb) {
+module.exports.findByUsername = function (username, cb) {
   process.nextTick(function () {
     for (var i = 0, len = records.length; i < len; i++) {
       var record = records[i];
