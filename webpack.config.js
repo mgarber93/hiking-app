@@ -22,6 +22,10 @@ module.exports = {
           from: path.resolve(__dirname, 'src/views'),
           to: path.resolve(__dirname, 'dist/views'),
         },
+        {
+          from: path.resolve(__dirname, 'src/public'),
+          to: path.resolve(__dirname, 'dist/public'),
+        },
       ],
       options: {
         concurrency: 100,

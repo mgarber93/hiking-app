@@ -53,3 +53,22 @@
   color: white;
   text-decoration: none;
 }
+
+.nearby-view {
+  display: flex;
+  padding-left: 0;
+}
+
+aside {
+  height: calc(100vh - 45px);
+  max-width: 265px;
+  padding: 1rem;
+}
+
+aside form {
+  position: sticky;
+}
+
+main {
+  padding: 1rem;
+}

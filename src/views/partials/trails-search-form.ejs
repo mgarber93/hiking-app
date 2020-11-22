@@ -1,0 +1,35 @@
+<form action="GET">
+  <div class="form-row align-items-center">
+    <div class="col-auto">
+      <label class="sr-only" for="zip">Zip</label>
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text">Zip</div>
+        </div>
+        <input type="number" class="form-control" id="zip" placeholder="00000">
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row align-items-center">
+    <div class="col-auto">
+      <label class="sr-only" for="limit">limit</label>
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text">Limit</div>
+        </div>
+        <input type="number" class="form-control" id="limit" placeholder="10">
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row align-items-center">
+    <div class="col-auto">
+      <label for="minDifficulty">Min difficulty</label>
+      <input type="range" min="0" max="5" step="1" class="form-control" id="minDifficulty" placeholder="0">
+      <label for="maxDifficulty">Max difficulty</label>
+      <input type="range" min="0" max="5" step="1" class="form-control" id="maxDifficulty" placeholder="5">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Search</button>
+</form>

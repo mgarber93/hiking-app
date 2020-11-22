@@ -1,41 +1,48 @@
 <%- include('partials/header') -%>
 <%- include('partials/navbar') -%>
 
-    <h1>Nearby Trails</h1>
+<div class="container-fluid nearby-view" id="nearby-view">
+  <aside class="bg-light border-right" id="sidebar-wrapper">
+    <div class="list-group list-group-flush">
+      <%- include('partials/trails-search-form') -%>
+    </div>
+  </aside>
 
-    <div class="container">
-        <div class="d-flex justify-content-center">
-          <div class="searchbar">
-            <input class="search_input" type="text" name="" placeholder="Enter a location..">
-            <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+  <main class="container">
+    <div class="card">
+      <div class="card-header"><strong>Coastal Peak</strong></div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <strong>Location: </strong>
+            <div>101 North Peak Rd.</div>
+          </div>
+          <div class="col">
+            <strong>Distance: </strong>
+            <div>0.3 mi. away</div>
+          </div>
+          <div class="col">
+            <strong>Difficulty: </strong>
+            <div>EASY</div>
+          </div>
+          <div class="col">
+            <strong>Est. Time: </strong>
+            <div>30 min.</div>
+          </div>
+          <div class="col">
+            <strong>Hike Length: </strong>
+            <div>1.0 mi.</div>
           </div>
         </div>
-      </div><br>
 
-    <div class="card">
-        <div class="card-header"><strong>Coastal Peak</strong></div>
-        <div class="card-body">
-            <div class="row">
-                <div class="col">
-                  <strong>Location: </strong><div>101 North Peak Rd.</div>
-                </div>
-                <div class="col">
-                    <strong>Distance: </strong><div>0.3 mi. away</div>
-                    </div>
-                <div class="col">
-                <strong>Difficulty: </strong><div>EASY</div>
-                </div>
-                    <div class="col">
-                        <strong>Est. Time: </strong><div>30 min.</div>
-                        </div>
-                        <div class="col">
-                            <strong>Hike Length: </strong><div>1.0 mi.</div>
-                            </div>
-              </div>
+        <br>
+        <a href="#" class="btn btn-primary" id="directions">Get Directions</a>
+        <a href="#" class="btn btn-primary" id="gear"> Gear Recommendations</a>
+      </div>
+    </div>
+    <br>
+  </main>
+  <br>
 
-          <br><a href="#" class="btn btn-primary" id="directions">Get Directions</a>
-          <a href="#" class="btn btn-primary" id="gear"> Gear Recommendations</a>
-        </div>
-      </div><br>
-
-      <%- include('partials/footer') -%>
+</div>
+<%- include('partials/footer') -%>

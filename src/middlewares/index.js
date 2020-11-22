@@ -1,8 +1,10 @@
+import express from 'express';
 import bodyParser from 'body-parser';
 import { Strategy } from 'passport-local';
 import ejs from 'ejs';
 import morgan from 'morgan';
 import passport from 'passport';
+import path from 'path';
 import * as users from '../controllers/users';
 
 function configurePassport() {
@@ -50,7 +52,8 @@ export function addMiddlewares(app) {
   // Configure view engine
   app.set('view engine', 'ejs');
   app.engine('ejs', ejs.__express);
-  app.set('views', __dirname + '/views');
+  app.set('views', path.join(__dirname, 'views'));
+  app.use(express.static(path.join(__dirname, 'public')));
 
   // middlewares
   // parse application/x-www-form-urlencoded
