@@ -77,6 +77,9 @@ app.post('/search', async function redirectToSearch(req, res) {
     element.time = element.length / 2 + 0.5 * (element.ascent / 1000);
   });
   console.log(results);
+  console.log(req.body.minDifficulty);
+  console.log(req.body.maxDifficulty);
+  console.log(req.body.zip);
   res.render('search-results', { results: results, gear: gear });
 });
 
